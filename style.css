@@ -55,6 +55,8 @@ color:#444;
   max-width:420px;
   transform: scale(1);
   background: transparent;
+    padding: 20px;           /* ⬅️ INI KUNCINYA */
+  box-sizing: border-box;  /* wajib */
 }
 
 /* ================= GAMEBOY SCREEN ================= */
@@ -886,5 +888,16 @@ box-shadow:0 1px 0 #222;
 
   .menu button{
     font-size:8px;
+  }
+}
+
+/* === SAFE SPACE SEMUA HP === */
+@media (max-width:500px){
+  .app-wrapper{
+    padding:
+      calc(20px + env(safe-area-inset-top))
+      calc(20px + env(safe-area-inset-right))
+      calc(20px + env(safe-area-inset-bottom))
+      calc(20px + env(safe-area-inset-left));
   }
 }
