@@ -859,3 +859,10 @@ box-shadow:0 1px 0 #222;
   z-index: 5;
 }
 
+@media (max-width: 480px){
+  .app-wrapper {
+    margin: 40px 20px;
+    padding: 16px;
+  }
+}
+
