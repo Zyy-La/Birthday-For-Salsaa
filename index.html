@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>For Sinta Salsabilla</title>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <div id="arenaWrapper">
+<!-- OPENING -->
+<section id="opening">
+  <div class="console">
+    <div class="power">POWER</div>
+    <div class="lcd">
+      <h2>Happy Birthday</h2>
+      <p class="press">Press Start</p>
+    </div>
+
+    <div class="controls">
+
+       <!-- MENU -->
+      <div id="menu" class="menu">
+        <button onclick="showSection('message')">MESSAGE</button>
+        <button onclick="showSection('gallery')">GALLERY</button>
+        <button onclick="showSection('music')">MUSIC</button>
+        <button onclick="showSection('game')">GAME</button>
+      </div>
+
+      <!-- D PAD -->
+      <div class="dpad">
+        <div class="up">▲</div>
+        <div class="down">▼</div>
+        <div class="left">◀</div>
+        <div class="right">▶</div>
+      </div>
+
+      <!-- A B BUTTON -->
+      <div class="ab-buttons">
+        <div class="btn b">B</div>
+        <div class="btn a">A</div>
+      </div>
+      <div class="speaker">
+<div></div><div></div><div></div><div></div><div></div><div></div>
+<div></div><div></div><div></div><div></div><div></div><div></div>
+</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- MESSAGE -->
+<section id="message">
+  <h3>MESSAGE</h3>
+  <div class="chat-bubble"></div>
+  <div class="nav-buttons">
+    <button class="nav-btn btn-back" onclick="showSection('opening')">← BACK</button>
+    <button class="nav-btn btn-next" onclick="showSection('gallery')">NEXT →</button>
+  </div>
+</section>
+
+
+<!-- GALLERY -->
+<section id="gallery">
+  <h2 class="title">Galeri</h2>
+  <div class="photobox">
+    <div class="photobox-header">
+      <div class="dots">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+      </div>
+      <div class="box-title">Photobox</div>
+    </div>
+    <div class="photo-frame">
+      <div id="photoContainer"></div>
+    </div>
+    <p id="status">Menyiapkan foto...</p>
+  </div>
+  <div class="nav-buttons">
+    <button class="nav-btn btn-back" onclick="showSection('message')">← BACK</button>
+    <button class="nav-btn btn-next" onclick="showSection('music')">NEXT →</button>
+  </div>
+</section>
+
+<!-- MUSIC -->
+<section id="music">
+
+<div class="music-box">
+
+<h2 class="music-title">Music Player</h2>
+
+<img id="cover" class="cover" src="cover1.jpg">
+
+<p id="songTitle" class="song">Judul Lagu</p>
+<p id="artist" class="artist">Artis</p>
+
+<input type="range" id="progress" value="0">
+<div class="time">
+<span id="current">0:00</span>
+<span id="duration">0:00</span>
+</div>
+
+<div class="controls-music">
+<button id="prevMusic">⏮</button>
+<button id="musicBtn">▶</button>
+<button id="nextMusic">⏭</button>
+</div>
+
+<div class="playlist">
+<h3>PLAYLIST</h3>
+<ul id="playlist">
+<li data-index="0">Pasilyo</li>
+<li data-index="1">Here With Me</li>
+<li data-index="2">Abadi(Indo Version)</li>
+<li data-index="3">To The Bone</li>
+</ul>
+</div>
+
+</div>
+
+<audio id="bgMusic" preload="auto"></audio>
+
+<div class="nav-buttons">
+<button class="nav-btn btn-back" onclick="showSection('gallery')">← BACK</button>
+<button class="nav-btn btn-next" onclick="showSection('game')">NEXT →</button>
+</div>
+
+</section>
+
+<!-- GAME -->
+<section id="game">
+
+  <h2 class="tet">TETRIS</h2>
+
+  <div class="hud">
+    <span>SCORE: <b id="score">0</b></span>
+    <span>LEVEL: <b id="level">1</b></span>
+  </div>
+
+  <!-- WRAPPER LUAR (posisi referensi) -->
+  <div id="arenaWrapper">
+    <canvas id="tetris"></canvas>
+
+    <!-- GAME OVER MENEMPEL KE ARENA -->
+    <div id="gameOverScreen" class="gameover">
+      <div class="gameover-box">
+        <div class="go-row">
+        <h1 id="goTitle">GAME OVER</h1>
+
+      <p id="goMsg">
+       <span class="yell">INGET YAA!!</span>
+      <span class="walau">walaupun kamu kalah,</span>
+      <span class="walau">tapi kamu selalu menang kok</span>
+      <span class="walau">dihati aku JIAKHHHH</span>
+
+      <span class="love">I LOVE YOU!!!</span>
+</p>
+        </div>
+           <div class="go-buttons"></div>
+        <button id="confirmBtn">CONFIRM</button>
+        <button id="resetBtn" style="display:none;">RESET</button>
+        <button id="backBtn" style="display:none;">KEMBALI</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="tetris-controls">
+    <button onclick="moveLeft()">⬅</button>
+    <button onclick="rotatePiece()">ROTASION</button>
+    <button onclick="moveRight()">➡</button>
+  </div>
+
+  <div class="nav-buttons">
+    <button class="nav-btn btn-back" onclick="showSection('music')">← BACK</button>
+
+      </div> <!-- nav-buttons -->
+</section> <!-- game -->
+</div>
+<!-- SCRIPT PALING BAWAH BODY -->
+<script src="script.js"></script>
+</body>
+</html>
