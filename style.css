@@ -4,10 +4,9 @@ body{
   background: radial-gradient(circle at center, #2649e7 0%, #b830ca 60%, #ed00f5 100%);
   font-family:'Press Start 2P';
 
-  display:flex;
-  justify-content:center;
+  padding:20px;          /* ⬅️ RUANG KIRI KANAN */
+  box-sizing:border-box; /* wajib */
 }
-
 /* ================= SECTION ================= */
 
 section{
