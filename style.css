@@ -1,14 +1,11 @@
 body{
   margin:0;
   min-height:100vh;
-  overflow-x:hidden;
-
-  background:
-    radial-gradient(circle at center, #2649e7 0%, #b830ca 60%, #ed00f5 100%);
-
+  background: radial-gradient(circle at center, #2649e7 0%, #b830ca 60%, #ed00f5 100%);
   font-family:'Press Start 2P';
 
-  display:block; /* ⬅️ HAPUS FLEX */
+  display:flex;
+  justify-content:center;
 }
 
 /* ================= SECTION ================= */
@@ -49,14 +46,12 @@ color:#444;
 }
 
 /* layar utama */
-.app-wrapper {
-   width:100%;
+.app-wrapper{
+  width:100%;
   max-width:420px;
-  transform: scale(1);
-  background: transparent;
-    padding: 20px;           /* ⬅️ INI KUNCINYA */
-  box-sizing: border-box;  /* wajib */
-    margin: 40px auto;   /* ⬅️ TAMBAHAN INI */
+  margin:60px auto;      /* ruang atas bawah */
+  padding:20px;          /* ruang kiri kanan */
+  box-sizing:border-box;
 }
 
 /* ================= GAMEBOY SCREEN ================= */
@@ -864,40 +859,3 @@ box-shadow:0 1px 0 #222;
   z-index: 5;
 }
 
-/* 5. 🔥 MEDIA QUERY (INI PALING BAWAH) */
-@media (max-width: 500px) {
-  .app-wrapper {
-    transform: scale(0.9);
-  }
-}
-
-@media (min-width: 900px) {
-  .app-wrapper {
-    transform: scale(1.2);
-  }
-}
-
-@media (max-width: 480px){
-  .console{
-    transform: scale(0.92);
-  }
-
-  .lcd{
-    width:100%;
-  }
-
-  .menu button{
-    font-size:8px;
-  }
-}
-
-/* === SAFE SPACE SEMUA HP === */
-@media (max-width:500px){
-  .app-wrapper{
-    padding:
-      calc(20px + env(safe-area-inset-top))
-      calc(20px + env(safe-area-inset-right))
-      calc(20px + env(safe-area-inset-bottom))
-      calc(20px + env(safe-area-inset-left));
-  }
-}
