@@ -1,7 +1,7 @@
 body{
   margin:0;
   min-height:100vh;
-
+  overflow-x:hidden;
   /* kamu bisa ganti warna di sini */
   background:
     radial-gradient(circle at center, #2649e7 0%, #b830ca 60%, #ed00f5 100%);
@@ -16,11 +16,9 @@ body{
 
 section{
 display:none;
-position:absolute;
-top:50%;
-left:50%;
-transform:translate(-50%,-50%);
-width:340px;
+width:100%;
+max-width:360px;
+margin:auto;
 text-align:center;
 }
 
@@ -34,8 +32,9 @@ display:block;
 background:#eaeaea;
 padding:25px;
 border-radius:25px;
-width:340px;
-height:480px;
+width:100%;
+max-width:340px;
+height:auto;
 box-shadow:0 20px 40px rgba(0,0,0,0.6);
 position:relative;
 }
@@ -52,9 +51,9 @@ color:#444;
 
 /* layar utama */
 .app-wrapper {
-  width: 420px;        /* base ukuran HP game kamu */
-  height: 800px;
-  transform-origin: center;
+   width:100%;
+  max-width:420px;
+  transform: scale(1);
   background: transparent;
 }
 
@@ -873,5 +872,19 @@ box-shadow:0 1px 0 #222;
 @media (min-width: 900px) {
   .app-wrapper {
     transform: scale(1.2);
+  }
+}
+
+@media (max-width: 480px){
+  .console{
+    transform: scale(0.92);
+  }
+
+  .lcd{
+    width:100%;
+  }
+
+  .menu button{
+    font-size:8px;
   }
 }
