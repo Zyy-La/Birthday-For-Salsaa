@@ -11,6 +11,7 @@ body{
 
 section{
 display:none;
+width:fit-content;   
 max-width:360px;
 margin:auto;
 text-align:center;
