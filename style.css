@@ -46,14 +46,12 @@ color:#444;
 }
 
 /* layar utama */
-.app-wrapper{
-  width:100%;
+.app-wrapper {
+  width: calc(100% - 40px);  /* ⬅️ INI KUNCINYA */
   max-width:420px;
-  margin:60px auto;      /* ruang atas bawah */
-  padding:20px;          /* ruang kiri kanan */
+  margin:40px auto;
   box-sizing:border-box;
 }
-
 /* ================= GAMEBOY SCREEN ================= */
 
 .lcd{
